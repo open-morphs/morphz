@@ -1,0 +1,19 @@
+[package]
+name = "morphz"
+version = "0.1.0"
+authors = ["Dom Rodriguez <shymega@shymega.org.uk>"]
+edition = "2021"
+resolver = "2"
+readme = "README.md"
+publish = false
+license = "MIT"
+categories = ["embedded", "firmware", "ble"]
+keywords = ["embedded", "control", "gui", "cli", "bluetooth", "ble", "earbuds"]
+repository = "https://github.com/morph-audio/morphz.git"
+description = "GUI/CLI helper app for the Morph InfiniConnect earbuds."
+homepage = "https://github.com/morph-audio/morphz"
+
+[dependencies]
+iced = "*"
+morph-rs = { git = "https://github.com/shymega/morph-rs" }
+serde = "*"
