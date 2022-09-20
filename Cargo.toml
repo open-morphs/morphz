@@ -29,3 +29,26 @@ morph-rs = { git = "https://github.com/shymega/morph-rs", features = [ "windows"
 iced = "0.4.2"
 morph-rs = { git = "https://github.com/shymega/morph-rs", features = [ "macos" ] }
 
+[profile.dev]
+lto = true
+opt-level = "z"
+codegen-units = 1
+debug = true
+strip = false
+
+[profile.dev.package."*"]
+codegen-units = 1
+opt-level = "z"
+debug = true
+
+[profile.release]
+lto = true
+opt-level = "z"
+codegen-units = 1
+debug = false
+strip = true
+
+[profile.release.package."*"]
+codegen-units = 1
+opt-level = "s"
+debug = false
