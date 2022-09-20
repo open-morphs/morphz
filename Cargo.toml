@@ -14,20 +14,20 @@ description = "GUI/CLI helper app for the Morph InfiniConnect earbuds."
 homepage = "https://github.com/morph-audio/morphz"
 
 [dependencies]
-serde = { version = "*", features = [ "derive" ] }
+serde = { version = "*", features = ["derive"] }
 
 [target.'cfg(target_os = "linux")'.dependencies]
-bluer = { version = "0.15.0", features = [ "rfcomm" ] }
+bluer = { version = "0.15.0", features = ["rfcomm"] }
 iced = "0.4.2"
-morph-rs = { git = "https://github.com/shymega/morph-rs", features = [ "linux" ] }
+morph-rs = { git = "https://github.com/shymega/morph-rs", features = ["linux"] }
 
 [target.'cfg(target_os = "windows")'.dependencies]
 iced = "0.4.2"
-morph-rs = { git = "https://github.com/shymega/morph-rs", features = [ "windows" ] }
+morph-rs = { git = "https://github.com/shymega/morph-rs", features = ["windows"] }
 
 [target.'cfg(target_os = "macos")'.dependencies]
 iced = "0.4.2"
-morph-rs = { git = "https://github.com/shymega/morph-rs", features = [ "macos" ] }
+morph-rs = { git = "https://github.com/shymega/morph-rs", features = ["macos"] }
 
 [profile.dev]
 lto = true
