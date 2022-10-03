@@ -88,9 +88,9 @@ checksum = "0d8c1fef690941d3e7788d328517591fecc684c084084702d6ff1641e993699a"
 
 [[package]]
 name = "bluer"
-version = "0.15.0"
+version = "0.15.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8d5d0ffbd0a90555c5ef8996b52f04094d8d3c2afed38c811b7a9b13942b4316"
+checksum = "fbe1b56a42432f65f98bf616be9e43bb498e104010a2c5eb9f89cdcc97e7bdb4"
 dependencies = [
  "futures",
  "hex",
