@@ -17,7 +17,7 @@ homepage = "https://github.com/morph-audio/morphz"
 serde = { version = "*", features = ["derive"] }
 
 [target.'cfg(target_os = "linux")'.dependencies]
-bluer = { version = "0.15.0", features = ["rfcomm"] }
+bluer = { version = "0.15.1", features = ["rfcomm"] }
 iced = "0.4.2"
 morph-rs = { git = "https://github.com/shymega/morph-rs", features = ["linux"] }
 
