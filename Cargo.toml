@@ -15,19 +15,23 @@ homepage = "https://github.com/morph-audio/morphz"
 
 [dependencies]
 serde = { version = "*", features = ["derive"] }
+serde_json = "*"
+tokio = { version = "*", features = ["rt", "sync"] }
+futures = "*"
+iced = { version = "0.4", features = ["tokio"] }
 
 [target.'cfg(target_os = "linux")'.dependencies]
-bluer = { version = "0.15.1", features = ["rfcomm"] }
-iced = "0.4.2"
-morph-rs = { git = "https://github.com/shymega/morph-rs", features = ["linux"] }
+morph-rs = { git = "https://github.com/shymega/morph-rs" }
 
 [target.'cfg(target_os = "windows")'.dependencies]
-iced = "0.4.2"
-morph-rs = { git = "https://github.com/shymega/morph-rs", features = ["windows"] }
+morph-rs = { git = "https://github.com/shymega/morph-rs" }
 
 [target.'cfg(target_os = "macos")'.dependencies]
-iced = "0.4.2"
-morph-rs = { git = "https://github.com/shymega/morph-rs", features = ["macos"] }
+morph-rs = { git = "https://github.com/shymega/morph-rs" }
+
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+iced_web = "0.4"
+wasm-bindgen = "*"
 
 [profile.dev]
 lto = true
