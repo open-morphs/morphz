@@ -14,11 +14,11 @@ description = "GUI/CLI helper app for the Morph InfiniConnect earbuds."
 homepage = "https://github.com/morph-audio/morphz"
 
 [dependencies]
+futures = "*"
+iced = { version = "0.4", features = ["tokio"] }
 serde = { version = "*", features = ["derive"] }
 serde_json = "*"
 tokio = { version = "*", features = ["rt", "sync"] }
-futures = "*"
-iced = { version = "0.4", features = ["tokio"] }
 
 [target.'cfg(target_os = "linux")'.dependencies]
 morph-rs = { git = "https://github.com/shymega/morph-rs" }
